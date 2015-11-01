@@ -1,23 +1,39 @@
+'use strict';
+
 require('normalize.css');
-require('styles/App.css');
+require('styles/Main.scss');
 
 import React from 'react';
 
-let yeomanImage = require('../images/yeoman.png');
+let mainImg = require('../images/lab.png');
+
+let User = require('./User');
+
+// let HouseListing = require('./HouseListingComponent');
+
+// let UserGistComponent = require('./UserGistComponent');
+
+let Todo = require('./TodoComponent')
 
 class AppComponent extends React.Component {
   render() {
+    var user = {
+      name: 'Louis',
+      city: 'Seattle'
+    };
+
     return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
+      <div className='index'>
+        <img src={mainImg} alt='Louis'/>
+
+        <User user={user}/>
+
+        <Todo items={[]}/>
       </div>
     );
   }
 }
 
-AppComponent.defaultProps = {
-
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;
