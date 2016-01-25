@@ -17,6 +17,7 @@ let Todo = require('./TodoComponent')
 
 class AppComponent extends React.Component {
   render() {
+
     var user = {
       name: 'Louis',
       city: 'Seattle'
